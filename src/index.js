@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import router from './routers'
 import modelIndex from './models'
+import teacherModel from './models/teacher.js';
 import createHistory from 'history/createBrowserHistory'
 
 import dva from 'dva';
@@ -15,6 +16,7 @@ let app = new dva({
 app.router(router)
 
 app.model(modelIndex)
+app.model(teacherModel);
 
 app.start('#root')
 
